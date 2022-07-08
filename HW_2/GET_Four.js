@@ -59,4 +59,4 @@ pm.environment.set("salary", rqst.salary)
 for (i = 0; i < salary.length; i++ ) {
     console.log(salary[i])
 };
-// или через метод: salary.forEach((item) => {console.log(item)}) 
+// или через метод ForEach(для массива): salary.forEach((item) => {console.log(item)}) 
