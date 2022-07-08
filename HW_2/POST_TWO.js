@@ -35,15 +35,15 @@ let rqst_salary_1_5 = rqst.u_salary_1_5_year
 
 //8. Проверить, что name в ответе равно name s request (name забрать из request.)
 pm.test('Correct rqst_name', function () {
-    pm.expect(rqst_name).to.eql('Mikhail')
+    pm.expect(rqst_name).to.eql(name)
 });
 //9. Проверить, что age в ответе равно age s request (age забрать из request.)
 pm.test('Correct rqst_age', function () {
-    pm.expect(rqst_age).to.eql('30')
+    pm.expect(rqst_age).to.eql(age)
 });
 //10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
 pm.test('Correct rqst_salary', function () {
-    pm.expect(rqst_salary).to.eql('60000')
+    pm.expect(rqst_salary).to.eql(String(salary))
 });
 //11. Вывести в консоль параметр family из response.
 console.log('response family', family)
