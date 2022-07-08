@@ -9,23 +9,24 @@ let jsonData = pm.response.json()
 let rqst = request.data
 // 8. Проверить, что json response имеет параметр start_qa_salary
 pm.test('JSON response have start_qa_salary', function () {
-    pm.expect(pm.response.text()).to.include('start_qa_salary')
+    pm.expect(jsonData).to.have.property('start_qa_salary')
 });
+// можно писать вот так: pm.response.to.have.jsonBody('start_qa_salary')
 // 9. Проверить, что json response имеет параметр qa_salary_after_6_months
 pm.test('JSON response have qa_salary_after_6_months', function () {
-    pm.expect(pm.response.text()).to.include('qa_salary_after_6_months')
+    pm.expect(jsonData).to.have.property('qa_salary_after_6_months')
 });
 // 10. Проверить, что json response имеет параметр qa_salary_after_12_months
 pm.test('JSON response have qa_salary_after_12_months', function () {
-    pm.expect(pm.response.text()).to.include('qa_salary_after_12_months')
+   pm.expect(jsonData).to.have.property('qa_salary_after_12_months')
 });
 // 11. Проверить, что json response имеет параметр qa_salary_after_1.5_year
 pm.test('JSON response have qa_salary_after_1.5_year', function () {
-    pm.expect(pm.response.text()).to.include('qa_salary_after_1.5_year')
+    pm.expect(jsonData).to.have.property('qa_salary_after_1.5_year')
 });
 // 12. Проверить, что json response имеет параметр qa_salary_after_3.5_years
 pm.test('JSON response have qa_salary_after_3.5_years', function () {
-    pm.expect(pm.response.text()).to.include('qa_salary_after_3.5_years')
+   pm.expect(jsonData).to.have.property('qa_salary_after_3.5_years')
 });
 // 13. Проверить, что json response имеет параметр person
 pm.test('JSON response have person', function () {
