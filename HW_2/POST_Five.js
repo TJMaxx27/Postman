@@ -69,3 +69,4 @@ pm.test('u_salary_5_years == rqst.salary*4.2', function () {
 for (i in jsonData.person){
     console.log(i + ' : ' + jsonData.person[i])
 }
+// Цикл в одну строку: Object.entries(jsonData.person).forEach(([key,value]) => console.log(`${key} : ${value}`))
